@@ -1,0 +1,100 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Map Application</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-8PzPqa3EDfzV+XzSPZzR8fs/5SOP1Z6WdFy3e5g3nVvC0f0kNxlwdwX3+YUXj/XD"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMb9Q0su67GX0h1iBY1jS9qN9o8BHzD4cE3N1e6"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- jQuery UI CSS for autocomplete -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+</head>
+<body>
+    <!-- Search bar -->
+    <input type="text" id="countrySearch" placeholder="Search for a country..." />
+    <!-- Main container -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Map container -->
+            <div id="map" class="col-md-8"></div>
+            <!-- Sidebar for weather info -->
+            <div id="sidebar" class="col-md-4">
+                <div class="row d-flex justify-content-center py-5">
+  <div class="col-md-8 col-lg-6 col-xl-5">
+
+    <div class="card text-body" style=" border-radius: 35px;">
+      <div class="card-body p-4">
+
+        <div class="d-flex">
+          <h6 class="flex-grow-1">Warsaw</h6>
+          <h6>15:07</h6>
+        </div>
+
+        <div class="d-flex flex-column text-center mt-5 mb-4">
+          <h6 class="display-4 mb-0 font-weight-bold"> 13°C </h6>
+          <span class="small" style="color: #868B94">Stormy</span>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1" style="font-size: 1rem;">
+            <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 40 km/h
+              </span>
+            </div>
+            <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 84%
+              </span></div>
+            <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> 0.2h
+              </span></div>
+          </div>
+          <div>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-weather/ilu1.webp"
+              width="100px">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- jQuery and jQuery UI for autocomplete -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    ></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pp2ONxx9qBJ9R+gjT+kANZwKOhSX9bEAT5YmyjE6Y9YW8yfJvWqZyRUBs8KPfBtk"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

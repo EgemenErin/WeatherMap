@@ -1,0 +1,38 @@
+/* static/css/style.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#map {
+  height: 100vh;
+}
+
+#sidebar {
+  height: 100vh;
+  overflow-y: auto;
+  display: none; /* Hidden by default */
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+/* Adjust the position of the search bar */
+#countrySearch {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
